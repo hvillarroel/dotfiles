@@ -19,22 +19,44 @@ Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 " File Search
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ctrlpvim/ctrlp.vim'
 
 " IDE
 Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'neoclide/coc.nvim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'yggdroot/indentline'
+" Plug 'scrooloose/neerdcommebter'
+Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
+
 " Git
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 
-"Plug 'sheerun/vim-polyglot'
-" Plug 'Valloric/YouCompleteMe'
-"
-Plug 'Yggdroot/indentLine'
+Plug 'sheerun/vim-polyglot'
+Plug 'Valloric/YouCompleteMe'
+
+" Tree
+Plug 'scrooloose/nerdtree'
+
+" Tmux
+Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
+
+" Typing
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
+
+" Autocomplete
+":wqPlug 'SirVer/ultisnips'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Status Bar
+Plug 'maximbaz/lightline-ale'
+Plug 'itchyny/lightline.vim'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -50,11 +72,19 @@ colorscheme dracula
 " Mapleader
 let mapleader=" "
 
+
+" Split resize
+nnoremap <Leader>> 10<C-w>>
+nnoremap <Leader>< 10<C-w><
+
+
 " nmap EasyMotion
 nmap <Leader>s <Plug>(easymotion-s2)
 
 " ========= Begin NerdTree ==========
-nmap <Leader>t :NERDTreeFind<CR>
+nmap <Leader>t :NERDTreeToggle<CR>
+nmap <Leader>f :NERDTreeFind<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
 
 " Open NerdTree by Default
 autocmd VimEnter ~/DEV/* NERDTree
@@ -64,6 +94,12 @@ autocmd VimEnter * wincmd p
 
 " AutoClose NerdTree, When the last file on the buffer is closed
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Remap keys for gotos
+nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
 
 " Ignore
 let g:NERDTreeIgnore = ['node_modules', '.git']
@@ -131,7 +167,7 @@ au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " uses zsh instead of bash
 function! OpenTerminal()
   split term://zsh
-  resize 10
+  resize 20
 endfunction
 nmap <Leader>r :call OpenTerminal()<CR>
 " ========== End FZF ==========
@@ -144,7 +180,6 @@ nmap <Leader>pp :Prettier<CR>
 " nmap save and quit
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
-nmap <Leader>qq :qall<CR>
-nmap <Leader>wq :wq<CR>
+nmap <Leader>qa :qall<CR>
 
 
