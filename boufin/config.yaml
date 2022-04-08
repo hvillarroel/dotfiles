@@ -1,0 +1,21 @@
+# Boufin config file
+
+# Global variables
+verbose: true
+format: table
+env: dev
+
+monitor: 
+  schedules:
+    list:
+
+  entities:
+    list:
+
+client:
+  auth:
+    # override the global variables
+    login:
+      format: json
+cloud:
+
