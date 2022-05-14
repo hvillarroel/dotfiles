@@ -67,7 +67,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 1.5
+  opacity: 0.95
 
   # Startup Mode (changes require restart)
   #
@@ -448,7 +448,7 @@ font:
 #alt_send_esc: true
 
 # Offer IPC using `alacritty msg` (unix only)
-#ipc_socket: true
+ipc_socket: true
 
 #mouse:
   # Click settings
@@ -853,7 +853,7 @@ key_bindings:
   #- { key: M,              mods: Command,                    action: Minimize              }
   #- { key: Q,              mods: Command,                    action: Quit                  }
   #- { key: W,              mods: Command,                    action: Quit                  }
-  #- { key: N,              mods: Command,                    action: SpawnNewInstance      }
+  - { key: N,              mods: Command,                    action: CreateNewWindow      }
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
