@@ -1,0 +1,11 @@
+[alias]
+	st = status
+	ci = commit
+	me = config user.name
+
+[core]
+	editor = nvim
+[user]
+	name = Hector Villarroel
+	email = hvillarroel@synaptic.cl
+

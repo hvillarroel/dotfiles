@@ -46,3 +46,16 @@ Font
 brew tap homebrew/cask-fonts && brew install --cask font-hack-nerd-font
 ```
 
+# Configs
+
+## git
+
+add next lines to `~/.gitconfig` file
+
+```
+[include]
+	path = ~/DEV/dotfiles/git/gitconfig
+```
+
+
+
