@@ -6,6 +6,7 @@
 #ZSH_THEME="hvillarroel"
 
 export LC_ALL=en_US.UTF-8
+export XDG_CONFIG_HOME="$HOME/.config"
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias DEV="cd ~/DEV"
 alias git-rollback='git reset HEAD~'
@@ -13,6 +14,7 @@ alias git-rm='git branch | grep -v "master" | grep -v "main" | grep -v "develop"
 alias gon='git open'
 alias gpc='git push origin $(git branch | grep \* | cut -d " " -f2)'
 alias gplc='git pull origin $(git branch | grep \* | cut -d " " -f2)'
+alias gsmain='git switch main && git pull origin main'
 
 alias docker_all_stop='docker stop $(docker ps --all -q)'
 alias docker_all_kill='docker stop $(docker ps --all -q) && docker rm -f $(docker ps --all -q)'
