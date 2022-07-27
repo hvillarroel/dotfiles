@@ -7,6 +7,8 @@
 
 export LC_ALL=en_US.UTF-8
 export XDG_CONFIG_HOME="$HOME/.config"
+export NODE_16="/usr/local/opt/node@16/bin/node"
+
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias DEV="cd ~/DEV"
 alias git-rollback='git reset HEAD~'
@@ -30,6 +32,7 @@ alias openw='tmux new-session \; split-window -v \; split-window -v \; split-win
  
 alias ll='exa -a -l --group-directories-first --sort name --icons --git'
 alias ls='exa --group-directories-first --sort name --icons'
+
 
 #source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 #source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
