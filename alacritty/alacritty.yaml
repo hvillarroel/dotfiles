@@ -29,17 +29,17 @@ window:
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 150
+    lines: 50
 
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
+  position:
+    x: 800
+    y: 300
 
   # Window padding (changes require restart)
   #
@@ -851,8 +851,8 @@ key_bindings:
   #- { key: H,              mods: Command,                    action: Hide                  }
   #- { key: H,              mods: Command|Alt,                action: HideOtherApplications }
   #- { key: M,              mods: Command,                    action: Minimize              }
-  #- { key: Q,              mods: Command,                    action: Quit                  }
-  #- { key: W,              mods: Command,                    action: Quit                  }
+  - { key: Q,              mods: Command,                    action: None                  }
+  - { key: W,              mods: Command,                    action: None                  }
   - { key: N,              mods: Command,                    action: CreateNewWindow      }
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
