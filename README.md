@@ -34,9 +34,9 @@ brew install via
 ```bash
 cd ~
 ln -s ~/hectorvillarroel.p@gmail.com\ -\ Google\ Drive/My\ Drive/configs/ssh\ keys/id_rsa ~/.ssh/id_rsa
-ln -s DEV/dotfiles/tmux/tmux.conf .tmux.conf
-ln -s ~/DEV/dotfiles/zsh/hvillarroel.zsh-theme
-ln -s ~/DEV/dotfiles/alacritty/alacritty.yml .alacritty.yml
+ln -s DEV/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -s ~/DEV/dotfiles/zsh/hvillarroel.zsh-theme ~/.oh-my-zsh/custom/themes/hvillarroel.zsh-theme
+ln -s ~/DEV/dotfiles/alacritty/alacritty.yaml ~/.alacritty.yml
 ```
 
 
