@@ -2,3 +2,5 @@
 .DS_Store
 **/plugged/
 nvim/autoload
+nvim
+zsh
