@@ -28,7 +28,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'editorconfig/editorconfig-vim'
 
 " COC config
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
@@ -42,6 +42,21 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+Plug 'tpope/vim-fugitive'
+
+
+Plug 'terryma/vim-multiple-cursors'
+
+Plug 'prettier/vim-prettier', {
+  'do': 'yarn install --frozen-lockfile --production',
+  'branch': 'release/0.x'
+}
+
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 
 call plug#end()
@@ -78,18 +93,24 @@ nnoremap <Leader>< 10<C-w><
 " let g:fzf_preview_window = ['right:50%', 'ctrl-p']
 
 
-command! -bang -nargs=? -complete=dir GFiles
-  \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
+" command! -bang -nargs=? -complete=dir GFiles
+  " \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
 
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
+" command! -bang -nargs=* Ag
+  " \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
 
-command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+" command! -bang -nargs=? -complete=dir Files
+  " \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 
-map <C-p> :Files<CR>
-map <Leader>nt :NERDTreeFind<CR>
+" map <C-p> :Files<CR>
+" map <Leader>nt :NERDTreeFind<CR>
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 map tn :bn<CR>
@@ -111,7 +132,7 @@ let g:tmux_navigator_save_on_switch = 2
 
 "  nerdtree
 let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1

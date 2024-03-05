@@ -6,4 +6,4 @@ set encoding=utf-8
 set showmatch
 set relativenumber
 set clipboard=unnamed
-set colorcolumn=81 " Draw column at line character limit
+set colorcolumn=100 " Draw column at line character limit

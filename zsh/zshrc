@@ -7,7 +7,8 @@
 
 export LC_ALL=en_US.UTF-8
 export XDG_CONFIG_HOME="$HOME/.config"
-export NODE_16="/usr/local/opt/node@16/bin/node"
+export NODE_16="$XDG_CONFIG_HOME/nvm/versions/node/v16.18.0/bin/node"
+export CLOUDSDK_PYTHON="python3.8"
 
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias DEV="cd ~/DEV"
@@ -39,6 +40,9 @@ alias ls='exa --group-directories-first --sort name --icons'
 
 unsetopt share_history
 
+
+source ~/DEV/dotfiles/zsh/env
+
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #export PATH="/usr/local/sbin:$PATH"
 
@@ -69,6 +73,8 @@ compdef _boufin_completion boufin
 # Verbose for boufin cli
 #export BF_VERBOSE=true
 #export BF_FORMAT=table
+
+export BF_GITHUB_VERBOSE=false
 
 
 
