@@ -1,0 +1,49 @@
+import = ["/Users/hvillarroel/DEV/dotfiles/alacritty/coolnight.theme.toml"]
+ipc_socket = true
+
+[font]
+size = 15.0
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "None"
+key = "Q"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "None"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Command"
+
+[window]
+opacity = 0.95
+
+[window.dimensions]
+columns = 150
+lines = 50
+
+[window.padding]
+x = 10
+y = 10
+
+[window.position]
+x = 800
+y = 300

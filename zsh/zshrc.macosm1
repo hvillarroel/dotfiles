@@ -1,0 +1,10 @@
+export LC_ALL=en_US.UTF-8
+
+alias gpc='git push origin $(git branch | grep \* | cut -d " " -f2)'
+alias gsmain='git switch main && git pull origin main'
+
+alias ll='eza -a -l --group-directories-first --sort name --icons --git'
+alias ls='eza --group-directories-first --sort name --icons'
+
+
+
