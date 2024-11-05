@@ -1,7 +1,12 @@
 export LC_ALL=en_US.UTF-8
 
+alias git-rollback='git reset HEAD~'
 alias gpc='git push origin $(git branch | grep \* | cut -d " " -f2)'
 alias gsmain='git switch main && git pull origin main'
+
+alias docker_all_stop='docker stop $(docker ps --all -q)'
+alias docker_all_kill='docker stop $(docker ps --all -q) && docker rm -f $(docker ps --all -q)'
+alias docker-all-kill='docker_all_kill'
 
 alias ll='eza -a -l --group-directories-first --sort name --icons --git'
 alias ls='eza --group-directories-first --sort name --icons'
