@@ -1,5 +1,5 @@
-import = ["/Users/hvillarroel/DEV/dotfiles/alacritty/coolnight.theme.toml"]
-ipc_socket = true
+general.import = ["~/DEV/dotfiles/alacritty/coolnight.theme.toml"]
+general.ipc_socket = true
 
 [font]
 size = 15.0
@@ -35,6 +35,7 @@ mods = "Command"
 
 [window]
 opacity = 0.95
+decorations = "Transparent"
 
 [window.dimensions]
 columns = 150
@@ -42,8 +43,13 @@ lines = 50
 
 [window.padding]
 x = 10
-y = 10
+y = 25
 
 [window.position]
 x = 800
 y = 300
+
+[scrolling]
+history = 10000
+
+
